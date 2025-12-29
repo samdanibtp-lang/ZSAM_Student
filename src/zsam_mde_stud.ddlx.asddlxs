@@ -1,0 +1,67 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+typeName: 'Student',
+typeNamePlural: 'Students',
+title:{
+type: #STANDARD,
+label: 'Studnt',
+value: 'Id'
+}
+}
+annotate entity ZSAM_STUD_C with
+{
+  @UI.facet: [
+   { id:'Student',
+   purpose: #STANDARD,
+   position: 10,
+   label: 'Student',
+   type: #IDENTIFICATION_REFERENCE
+    }
+    ]
+  @UI.identification: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10,
+                   label: 'Update Status',
+                   type : #FOR_ACTION,
+                   dataAction: 'UpdateStatus',
+                   invocationGrouping: #CHANGE_SET
+  
+   }]
+  Id;
+  @UI.identification: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  Firstname;
+  @UI.identification: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  Lastname;
+  @UI.identification: [{ position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  Age;
+  @UI.identification: [{ position: 50 }]
+  @UI.lineItem: [{ position: 50 }]
+  Course;
+  @UI.identification: [{ position: 60 }]
+  @UI.lineItem: [{ position: 60 }]
+  Courseduration;
+  @UI.identification: [{ position: 70 }]
+  @UI.lineItem: [{ position: 70 }]
+  Status;
+  @UI.identification: [{ position: 80 }]
+  @UI.lineItem: [{ position: 80 }]
+  Gender;
+  @UI.identification: [{ position: 90 }]
+  @UI.lineItem: [{ position: 90 }]
+  Genderdesc;
+  @UI.identification: [{ position: 100 }]
+  @UI.lineItem: [{ position: 100 }]
+  Dob;
+  @UI.identification: [{ position: 110 }]
+  @UI.lineItem: [{ position: 110 }]
+  Joinyear;
+  @UI.identification: [{ position: 120 }]
+  @UI.lineItem: [{ position: 120 }]
+  Yearofpass;
+
+  //Lastchangedat;
+  //Locallastchangedat;
+
+}

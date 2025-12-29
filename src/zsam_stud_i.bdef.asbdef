@@ -1,0 +1,31 @@
+managed implementation in class zbp_sam_stud_i unique;
+strict ( 2 );
+define behavior for ZSAM_STUD_I alias Students
+persistent table zsam_stud_101
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+  create ;
+  update;
+  delete;
+  action UpdateStatus;
+  field ( numbering : managed, readonly ) Id;
+  mapping for zsam_stud_101
+    {
+      Id                 = id;
+      Firstname          = firstname;
+      Lastname           = lastname;
+      Age                = age;
+      Course             = course;
+      Courseduration     = courseduration;
+      Status             = status;
+      Gender             = gender;
+      Genderdesc         = genderdesc;
+      Dob                = dob;
+      Joinyear           = joinyear;
+      Yearofpass         = yearofpass;
+      Lastchangedat      = lastchangedat;
+      Locallastchangedat = locallastchangedat;
+    }
+}
