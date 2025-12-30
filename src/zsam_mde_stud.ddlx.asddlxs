@@ -23,7 +23,8 @@ annotate entity ZSAM_STUD_C with
                    label: 'Update Status',
                    type : #FOR_ACTION,
                    dataAction: 'UpdateStatus',
-                   invocationGrouping: #CHANGE_SET
+//                   invocationGrouping: #CHANGE_SET
+                    invocationGrouping: #ISOLATED
   
    }]
   Id;
